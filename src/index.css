@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 0 0% 0%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 0%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 0%;
+    --primary: 0 0% 0%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 120 20% 95%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 120 10% 96%;
+    --muted-foreground: 0 0% 40%;
+    --accent: 120 30% 92%;
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 120 15% 90%;
+    --input: 120 15% 95%;
+    --ring: 120 50% 50%;
+    --success: 120 60% 50%;
+    --success-foreground: 0 0% 100%;
+    --chart-1: 120 60% 50%;
+    --chart-2: 120 40% 40%;
+    --chart-3: 120 30% 30%;
+    --chart-4: 0 70% 55%;
+    --chart-5: 0 50% 45%;
+    --radius: 0.75rem;
+    
+    /* Global Typography Sizes */
+    --text-xs: 0.75rem;
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.25rem;
+    --text-2xl: 1.5rem;
+    --text-3xl: 1.875rem;
+    --text-4xl: 2.25rem;
+    
+    /* Icon Sizes */
+    --icon-xs: 0.75rem;
+    --icon-sm: 1rem;
+    --icon-base: 1.25rem;
+    --icon-lg: 1.5rem;
+    --icon-xl: 2rem;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-base: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+  }
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 120 10% 18%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 120 8% 16%;
+    --muted-foreground: 0 0% 65%;
+    --accent: 120 15% 20%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 120 10% 20%;
+    --input: 120 10% 18%;
+    --ring: 120 50% 60%;
+    --success: 120 60% 60%;
+    --success-foreground: 0 0% 0%;
+    --chart-1: 120 60% 60%;
+    --chart-2: 120 50% 50%;
+    --chart-3: 120 40% 40%;
+    --chart-4: 0 60% 50%;
+    --chart-5: 0 50% 45%
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-size: var(--text-base);
+    line-height: 1.5;
+  }
+}
+
+@layer utilities {
+  /* Typography Utilities */
+  .text-xs { font-size: var(--text-xs); }
+  .text-sm { font-size: var(--text-sm); }
+  .text-base { font-size: var(--text-base); }
+  .text-lg { font-size: var(--text-lg); }
+  .text-xl { font-size: var(--text-xl); }
+  .text-2xl { font-size: var(--text-2xl); }
+  .text-3xl { font-size: var(--text-3xl); }
+  .text-4xl { font-size: var(--text-4xl); }
+  
+  /* Icon Size Utilities */
+  .icon-xs { width: var(--icon-xs); height: var(--icon-xs); }
+  .icon-sm { width: var(--icon-sm); height: var(--icon-sm); }
+  .icon-base { width: var(--icon-base); height: var(--icon-base); }
+  .icon-lg { width: var(--icon-lg); height: var(--icon-lg); }
+  .icon-xl { width: var(--icon-xl); height: var(--icon-xl); }
+  
+  /* Progress Animation Utilities */
+  .progress-animate {
+    transition: width 1.5s ease-out;
+  }
+  
+  /* Circular progress stroke animation */
+  .stroke-animate {
+    transition: stroke-dashoffset 1.5s ease-out;
+  }
+  
+  /* Color Utilities */
+  .text-success {
+    color: hsl(var(--success));
+  }
+  
+  .text-success\/80 {
+    color: hsl(var(--success) / 0.8);
+  }
+  
+  .text-destructive {
+    color: hsl(var(--destructive));
+  }
+  
+  .text-destructive\/80 {
+    color: hsl(var(--destructive) / 0.8);
+  }
+  
+  /* Background Utilities */
+  .bg-success {
+    background-color: hsl(var(--success));
+  }
+  
+  .bg-success\/10 {
+    background-color: hsl(var(--success) / 0.1);
+  }
+  
+  .bg-destructive\/10 {
+    background-color: hsl(var(--destructive) / 0.1);
+  }
+  
+  /* Border Utilities */
+  .border-l-success {
+    border-left-color: hsl(var(--success));
+  }
+  
+  .border-l-destructive {
+    border-left-color: hsl(var(--destructive));
+  }
+}
