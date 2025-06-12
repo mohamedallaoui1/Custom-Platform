@@ -1,8 +1,12 @@
 {
-    "rewrites": [
-      {
-        "source": "/:path*",
-        "destination": "/index.html"
-      }
-    ]
-  }
+  "rewrites": [
+    {
+      "source": "/api/calculate",
+      "destination": "http://3.125.115.4:8000/calculate"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/index.html"
+    }
+  ]
+}
