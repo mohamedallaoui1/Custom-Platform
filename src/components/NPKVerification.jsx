@@ -143,7 +143,7 @@ const NPKVerification = () => {
       }
 
 
-      const response = await fetch('http://3.125.115.4:8000/calculate', {
+      const response = await fetch('/api/calculate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
